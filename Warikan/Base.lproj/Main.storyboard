@@ -25,12 +25,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="42"/>
+            <point key="canvasLocation" x="1312.8" y="41.829085457271368"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="Ef5-Z1-FqU">
             <objects>
-                <viewController id="BTB-6O-7dE" customClass="TestViewController" customModule="Warikan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BTB-6O-7dE" customClass="TestViewController" customModule="Warikan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GNx-Hf-T1d"/>
                         <viewControllerLayoutGuide type="bottom" id="yZZ-6G-cv2"/>
@@ -47,16 +47,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="D7U-mj-pxu"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="D7U-mj-pxu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bfQ-Cz-80e"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqi-yI-Wbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="42"/>
+            <point key="canvasLocation" x="564" y="41.829085457271368"/>
         </scene>
     </scenes>
 </document>
