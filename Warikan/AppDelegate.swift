@@ -10,12 +10,18 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // ナビゲーションを利用する
+        // 初期画面のビューコントローラー
+        let rootVc = ViewController(nibName: nil, bundle: nil)
+        // 初期画面を設定してナビゲーションを作成
+        let navi = UINavigationController(rootViewController: rootVc)
+        // アプリのルートビューコントローラーをナビゲーションにする
+        self.window?.rootViewController = navi
         return true
     }
 
