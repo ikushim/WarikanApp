@@ -15,6 +15,9 @@
 		AB6129A81F7B843100996989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6129A61F7B843100996989 /* LaunchScreen.storyboard */; };
 		AB6129B01F7B8C3800996989 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129AF1F7B8C3800996989 /* TestViewController.swift */; };
 		AB6129B41F83910B00996989 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129B31F83910B00996989 /* InputViewController.swift */; };
+		AB6129B61F839E6C00996989 /* DateModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129B51F839E6C00996989 /* DateModelPicker.swift */; };
+		AB6129B81F83A07C00996989 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129B71F83A07C00996989 /* DateModel.swift */; };
+		AB6129BA1F83A30700996989 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129B91F83A30700996989 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		AB6129A91F7B843100996989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB6129AF1F7B8C3800996989 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		AB6129B31F83910B00996989 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		AB6129B51F839E6C00996989 /* DateModelPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModelPicker.swift; sourceTree = "<group>"; };
+		AB6129B71F83A07C00996989 /* DateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
+		AB6129B91F83A30700996989 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,9 @@
 				AB6129A91F7B843100996989 /* Info.plist */,
 				AB6129AF1F7B8C3800996989 /* TestViewController.swift */,
 				AB6129B31F83910B00996989 /* InputViewController.swift */,
+				AB6129B51F839E6C00996989 /* DateModelPicker.swift */,
+				AB6129B71F83A07C00996989 /* DateModel.swift */,
+				AB6129B91F83A30700996989 /* Data.swift */,
 			);
 			path = Warikan;
 			sourceTree = "<group>";
@@ -217,10 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6129BA1F83A30700996989 /* Data.swift in Sources */,
 				AB6129A01F7B843100996989 /* ViewController.swift in Sources */,
 				AB6129B01F7B8C3800996989 /* TestViewController.swift in Sources */,
+				AB6129B61F839E6C00996989 /* DateModelPicker.swift in Sources */,
 				AB61299E1F7B843100996989 /* AppDelegate.swift in Sources */,
 				AB6129B41F83910B00996989 /* InputViewController.swift in Sources */,
+				AB6129B81F83A07C00996989 /* DateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 初期画面のビューコントローラー
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-        let rootVc = storyboard.instantiateViewController(withIdentifier: "TestViewController")
+        let rootVc = storyboard.instantiateViewController(withIdentifier: "InputViewController")
         
         // 初期画面を設定してナビゲーションを作成
         let navi = UINavigationController(rootViewController: rootVc)
