@@ -10,11 +10,14 @@ import UIKit
 import TabPageViewController
 
 class ViewController: UIViewController {
-    
+     private var myLeftButton: UIBarButtonItem!
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //navigationController?.setNavigationBarHidden(true, animated: false)
+        //戻るボタンを隠す
+        self.navigationItem.hidesBackButton = true
         
         let tc = TabPageViewController.create()
         let vc1 = UIViewController()
@@ -58,6 +61,8 @@ class ViewController: UIViewController {
         vc4.view.addSubview(label4)
         vc5.view.addSubview(label5)
         
+
+        
         // タブに表示するタイトル
         tc.tabItems = [(vc1, "案1"), (vc2, "案2"), (vc3, "案3"), (vc4, "案4"), (vc5, "案5")]
         // 無限に移動できる
@@ -71,10 +76,16 @@ class ViewController: UIViewController {
         option.currentColor = UIColor(red: 0.5, green: 0.9, blue: 0.5, alpha: 1.0)
         
         tc.option = option
-        tc.navigationItem.hidesBackButton = true
+        //tc.navigationItem.hidesBackButton = true
+        
+        myLeftButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: "onClickMyButton:")
+        myLeftButton.tag = 1
+        tc.navigationItem.leftBarButtonItem = myLeftButton
         
         // 表示する
         navigationController?.pushViewController(tc, animated: false)
+        //
+        navigationController?.setNavigationBarHidden(false, animated: false)
         
     }
     

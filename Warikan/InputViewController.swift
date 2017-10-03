@@ -1,22 +1,19 @@
 //
-//  TestViewController.swift
+//  InputViewController.swift
 //  Warikan
 //
-//  Created by nttr on 2017/09/27.
+//  Created by nttr on 2017/10/03.
 //  Copyright © 2017年 nttr. All rights reserved.
 //
 
 import UIKit
 
-class TestViewController: UIViewController {
+class InputViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        //ナビゲーションバーを隠す
-        //self.navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
