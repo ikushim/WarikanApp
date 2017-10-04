@@ -10,18 +10,18 @@ import UIKit
 
 class InputViewController: UIViewController{
     
-    let moneyList = ["10,000円", "10,500円", "11,000円", "11,500円", "12,000円", "12,500円", "13,000円", "13,500円", "14,000円", "14,500円", "15,000円", "15,500円", "16,000円", "16,500円", "17,000円", "17,500円", "18,000円", "18,500円", "19,000円", "19,500円", "20,000円"]
+    //let moneyList = ["10,000円", "10,500円", "11,000円", "11,500円", "12,000円", "12,500円", "13,000円", "13,500円", "14,000円", "14,500円", "15,000円", "15,500円", "16,000円", "16,500円", "17,000円", "17,500円", "18,000円", "18,500円", "19,000円", "19,500円", "20,000円"]
     
 
     @IBOutlet weak var moneyPicker: UIPickerView!
     @IBOutlet weak var groupAPicker: UIPickerView!
-    //@IBOutlet weak var groupBPicker: UIPickerView!
-    //@IBOutlet weak var groupCPicker: UIPickerView!
+    @IBOutlet weak var groupBPicker: UIPickerView!
+    @IBOutlet weak var groupCPicker: UIPickerView!
     
     @IBOutlet weak var testLabel: UILabel!
     
-    //var moneyPickerDelDataSource: MonthYearPickerView!
     var dateModelPicker: DateModelPicker!
+    var numberModelPicker: NumberModelPicker!
     
     var rotationAngle: CGFloat!
     
@@ -34,6 +34,9 @@ class InputViewController: UIViewController{
         dateModelPicker = DateModelPicker()
         dateModelPicker.modelData = Data.getData()
         
+        numberModelPicker = NumberModelPicker()
+        numberModelPicker.modelData = NumberData.getNumberData()
+        
         var y = moneyPicker.frame.origin.y
         moneyPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         moneyPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
@@ -44,9 +47,22 @@ class InputViewController: UIViewController{
         groupAPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         groupAPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
         groupAPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        groupAPicker.delegate = dateModelPicker
-        groupAPicker.dataSource = dateModelPicker
+        groupAPicker.delegate = numberModelPicker
+        groupAPicker.dataSource = numberModelPicker
         
+        y = groupBPicker.frame.origin.y
+        groupBPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        groupBPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        groupBPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        groupBPicker.delegate = numberModelPicker
+        groupBPicker.dataSource = numberModelPicker
+        
+        y = groupCPicker.frame.origin.y
+        groupCPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        groupCPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        groupCPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        groupCPicker.delegate = numberModelPicker
+        groupCPicker.dataSource = numberModelPicker
         
         
     }

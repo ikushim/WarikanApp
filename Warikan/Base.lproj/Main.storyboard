@@ -97,12 +97,22 @@
                                 <rect key="frame" x="0.0" y="249" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0h-Ox-tcJ">
+                                <rect key="frame" x="0.0" y="396" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-hf-7jw">
+                                <rect key="frame" x="0.0" y="547" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="v21-Cz-eDX"/>
                     <connections>
                         <outlet property="groupAPicker" destination="zi0-zN-LFX" id="Suz-F8-ioq"/>
+                        <outlet property="groupBPicker" destination="A0h-Ox-tcJ" id="MXl-kB-rf5"/>
+                        <outlet property="groupCPicker" destination="ndo-hf-7jw" id="smg-ib-Tpc"/>
                         <outlet property="moneyPicker" destination="JTr-XG-C7C" id="fjy-9w-WRd"/>
                         <outlet property="testLabel" destination="6ql-JZ-hf3" id="nSo-0u-Fb7"/>
                     </connections>
