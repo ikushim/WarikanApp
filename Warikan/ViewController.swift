@@ -11,6 +11,12 @@ import TabPageViewController
 
 class ViewController: UIViewController {
     var testNumber: Int = 0
+    var numMoney: Int = 0
+    var numGroupA: Int = 0
+    var numGroupB: Int = 0
+    var numGroupC: Int = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +45,8 @@ class ViewController: UIViewController {
         //label4.textAlignment = .center
         //label5.textAlignment = .center
         
-        label1.text = String(testNumber)
+        let testtext = String(numMoney) + "," + String(numGroupA) + "," + String(numGroupB) + "," + String(numGroupC)
+        label1.text = testtext
         label2.text = "Aグループ：2,000円"
         label3.text = "Aグループ：1,000円"
         label4.text = "Aグループ：1,000円"

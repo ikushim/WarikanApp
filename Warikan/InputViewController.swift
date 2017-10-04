@@ -15,23 +15,22 @@ class InputViewController: UIViewController{
     @IBOutlet weak var groupBPicker: UIPickerView!
     @IBOutlet weak var groupCPicker: UIPickerView!
     
-    @IBOutlet weak var testLabel: UILabel!
+    var numMoney:Int = 0
+    var numGroupA:Int = 0
+    var numGroupB:Int = 0
+    var numGroupC:Int = 0
     
     var dateModelPicker: DateModelPicker!
     var numberModelPicker: NumberModelPicker!
-    
     var rotationAngle: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
         
-        NotificationCenter.default.addObserver(self, selector: #selector(pickerChanged), name: .pickersChanged, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(pickerChanged), name: .pickersChanged, object: nil)
         rotationAngle = -90 * (.pi/180)
         dateModelPicker = DateModelPicker()
         dateModelPicker.modelData = Data.getData()
-        
         numberModelPicker = NumberModelPicker()
         numberModelPicker.modelData = NumberData.getNumberData()
         
@@ -62,8 +61,7 @@ class InputViewController: UIViewController{
         groupCPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         groupCPicker.delegate = numberModelPicker
         groupCPicker.dataSource = numberModelPicker
-        
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,25 +72,42 @@ class InputViewController: UIViewController{
     
 
     @IBAction func liquidation(){
-        self.performSegue(withIdentifier: "toSecond", sender: nil)
+        numGroupA = groupAPicker.selectedRow(inComponent: 0)
+        numGroupB = groupBPicker.selectedRow(inComponent: 0)
+        numGroupC = groupCPicker.selectedRow(inComponent: 0)
+        let total = numGroupA + numGroupB + numGroupC
+        
+        if (total == 0){
+            numAlert()
+        } else {
+            self.performSegue(withIdentifier: "toSecond", sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        numGroupA = groupAPicker.selectedRow(inComponent: 0)
+        numGroupB = groupBPicker.selectedRow(inComponent: 0)
+        numGroupC = groupCPicker.selectedRow(inComponent: 0)
+        let StrMoney = dateModelPicker.modelData[moneyPicker.selectedRow(inComponent: 0)].price.replacingOccurrences(of: ",", with: "")
+        numMoney = Int(StrMoney.substring(to: StrMoney.index(before: StrMoney.endIndex)))!
+        
         //次の画面のオブジェクトを取得
         let viewController = segue.destination as!ViewController
-        viewController.testNumber = 5
+        viewController.numGroupA = numGroupA
+        viewController.numGroupB = numGroupB
+        viewController.numGroupC = numGroupC
+        viewController.numMoney = numMoney
     }
     
-    
-    func pickerChanged(){
-        let test1 = moneyPicker.selectedRow(inComponent: 0)
-        let test2 = groupAPicker.selectedRow(inComponent: 0)
-        let test3 = groupBPicker.selectedRow(inComponent: 0)
-        let test4 = groupCPicker.selectedRow(inComponent: 0)
-        let test5 = test1 + test2 + test3 + test4
-        testLabel.text = String(test5)
+    func numAlert(){
+        let alertText = "人数を入力してください"
+        let alertController = UIAlertController(title: "Alert", message: alertText, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            //self.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
-
 
     /*
     // MARK: - Navigation

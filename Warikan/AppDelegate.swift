@@ -17,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // ナビゲーションを利用する
         // 初期画面のビューコントローラー
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        //let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-        let rootVc = storyboard.instantiateViewController(withIdentifier: "InputViewController")
+        //let rootVc = storyboard.instantiateViewController(withIdentifier: "InputViewController")
         
         // 初期画面を設定してナビゲーションを作成
-        let navi = UINavigationController(rootViewController: rootVc)
+        //let navi = UINavigationController(rootViewController: rootVc)
         // アプリのルートビューコントローラーをナビゲーションにする
-        self.window?.rootViewController = navi
+        //self.window?.rootViewController = navi
         return true
     }
 
