@@ -147,6 +147,7 @@
 				TargetAttributes = {
 					AB6129991F7B843100996989 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QT87FHEGZN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -368,6 +369,7 @@
 			baseConfigurationReference = 8EFE4C2A77BF48DC1DE37163 /* Pods-Warikan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QT87FHEGZN;
 				INFOPLIST_FILE = Warikan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ikushima.Warikan;
@@ -381,6 +383,9 @@
 			baseConfigurationReference = 7AA00424A8A50F599AF5F643 /* Pods-Warikan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QT87FHEGZN;
 				INFOPLIST_FILE = Warikan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ikushima.Warikan;

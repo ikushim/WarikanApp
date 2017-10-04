@@ -14,6 +14,7 @@ class InputViewController: UIViewController{
     @IBOutlet weak var groupAPicker: UIPickerView!
     @IBOutlet weak var groupBPicker: UIPickerView!
     @IBOutlet weak var groupCPicker: UIPickerView!
+    //let groupCPicker = UIPickerView(frame: CGRect(x: 0, y: 200, width: 375, height: 100))
     
     var numMoney:Int = 0
     var numGroupA:Int = 0
@@ -36,28 +37,28 @@ class InputViewController: UIViewController{
         
         var y = moneyPicker.frame.origin.y
         moneyPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        moneyPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        moneyPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 50)
         moneyPicker.delegate = dateModelPicker
         moneyPicker.dataSource = dateModelPicker
         moneyPicker.selectRow(20, inComponent: 0, animated: true)
         
         y = groupAPicker.frame.origin.y
         groupAPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        groupAPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        groupAPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 50)
         groupAPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         groupAPicker.delegate = numberModelPicker
         groupAPicker.dataSource = numberModelPicker
         
         y = groupBPicker.frame.origin.y
         groupBPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        groupBPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        groupBPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 50)
         groupBPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         groupBPicker.delegate = numberModelPicker
         groupBPicker.dataSource = numberModelPicker
         
         y = groupCPicker.frame.origin.y
         groupCPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        groupCPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        groupCPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 50)
         groupCPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         groupCPicker.delegate = numberModelPicker
         groupCPicker.dataSource = numberModelPicker

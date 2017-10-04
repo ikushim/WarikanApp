@@ -37,7 +37,7 @@ extension NumberModelPicker: UIPickerViewDelegate {
         middleLabel.text = modelData[row].numberOfPeople
         middleLabel.textColor = UIColor.black
         middleLabel.textAlignment = .center
-        middleLabel.font = UIFont.systemFont(ofSize: 24, weight: UIFontWeightThin)
+        middleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightThin)
         view.addSubview(middleLabel)
         
         view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
