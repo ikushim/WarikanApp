@@ -10,14 +10,10 @@ import UIKit
 import TabPageViewController
 
 class ViewController: UIViewController {
-     private var myLeftButton: UIBarButtonItem!
+    var testNumber: Int = 0
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //navigationController?.setNavigationBarHidden(true, animated: false)
-        //戻るボタンを隠す
-        self.navigationItem.hidesBackButton = true
         
         let tc = TabPageViewController.create()
         let vc1 = UIViewController()
@@ -43,7 +39,7 @@ class ViewController: UIViewController {
         //label4.textAlignment = .center
         //label5.textAlignment = .center
         
-        label1.text = "Aグループ：1,000円"
+        label1.text = String(testNumber)
         label2.text = "Aグループ：2,000円"
         label3.text = "Aグループ：1,000円"
         label4.text = "Aグループ：1,000円"
@@ -68,30 +64,25 @@ class ViewController: UIViewController {
         // 無限に移動できる
         tc.isInfinity = true
         
-        let nc = UINavigationController()
-        nc.viewControllers = [tc]
+        self.addChildViewController(tc)
+        self.view.addSubview(tc.view)
         var option = TabPageOption()
         
         // 選択されたタブの文字&バーの色
         option.currentColor = UIColor(red: 0.5, green: 0.9, blue: 0.5, alpha: 1.0)
         
         tc.option = option
-        //tc.navigationItem.hidesBackButton = true
-        
-        myLeftButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: "onClickMyButton:")
-        myLeftButton.tag = 1
-        tc.navigationItem.leftBarButtonItem = myLeftButton
-        
-        // 表示する
-        navigationController?.pushViewController(tc, animated: false)
-        //
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    internal func onClickMyButton(sender: UIButton){
+        
+        self.dismiss(animated: true, completion: nil)
+
     }
     
 }

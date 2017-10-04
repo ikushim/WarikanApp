@@ -43,4 +43,8 @@ extension NumberModelPicker: UIPickerViewDelegate {
         view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
         return view
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        NotificationCenter.default.post(name: .pickersChanged, object: self)
+    }
 }

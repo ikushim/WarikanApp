@@ -30,6 +30,7 @@ class InputViewController: UIViewController{
         //self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
         
+        NotificationCenter.default.addObserver(self, selector: #selector(pickerChanged), name: .pickersChanged, object: nil)
         rotationAngle = -90 * (.pi/180)
         dateModelPicker = DateModelPicker()
         dateModelPicker.modelData = Data.getData()
@@ -42,6 +43,7 @@ class InputViewController: UIViewController{
         moneyPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
         moneyPicker.delegate = dateModelPicker
         moneyPicker.dataSource = dateModelPicker
+        moneyPicker.selectRow(20, inComponent: 0, animated: true)
         
         y = groupAPicker.frame.origin.y
         groupAPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
@@ -80,10 +82,19 @@ class InputViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //次の画面のオブジェクトを取得
-        let secondViewController = segue.destination as!SecondViewController
-        secondViewController.passedNumber = 5
+        let viewController = segue.destination as!ViewController
+        viewController.testNumber = 5
     }
     
+    
+    func pickerChanged(){
+        let test1 = moneyPicker.selectedRow(inComponent: 0)
+        let test2 = groupAPicker.selectedRow(inComponent: 0)
+        let test3 = groupBPicker.selectedRow(inComponent: 0)
+        let test4 = groupCPicker.selectedRow(inComponent: 0)
+        let test5 = test1 + test2 + test3 + test4
+        testLabel.text = String(test5)
+    }
 
 
     /*
