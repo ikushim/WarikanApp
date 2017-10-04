@@ -27,7 +27,7 @@ class InputViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
         
         rotationAngle = -90 * (.pi/180)
@@ -74,7 +74,15 @@ class InputViewController: UIViewController{
     
     
 
+    @IBAction func liquidation(){
+        self.performSegue(withIdentifier: "toSecond", sender: nil)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //次の画面のオブジェクトを取得
+        let secondViewController = segue.destination as!SecondViewController
+        secondViewController.passedNumber = 5
+    }
     
 
 

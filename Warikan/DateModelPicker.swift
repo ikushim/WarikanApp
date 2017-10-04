@@ -34,12 +34,6 @@ extension DateModelPicker: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: customWidth, height: customHeight))
         
-        let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: customWidth, height: 15))
-        topLabel.text = modelData[row].dayName
-        topLabel.textColor = UIColor.blue
-        topLabel.textAlignment = .center
-        topLabel.font = UIFont.systemFont(ofSize: 14, weight: UIFontWeightThin)
-        view.addSubview(topLabel)
         
         let middleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: customWidth, height: customHeight))
         middleLabel.text = modelData[row].price

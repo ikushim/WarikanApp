@@ -9,13 +9,13 @@
 import Foundation
 
 class DateModel {
-    var dayName = ""
+    //var dayName = ""
     var price = ""
-    var date = ""
+    //var date = ""
     
-    init(dayName: String, price: String, date: String){
-        self.dayName = dayName
+    init(price: String){
+       // self.dayName = dayName
         self.price = price
-        self.date = date
+        //self.date = date
     }
 }
