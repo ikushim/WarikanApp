@@ -9,9 +9,6 @@
 import UIKit
 
 class InputViewController: UIViewController{
-    
-    //let moneyList = ["10,000円", "10,500円", "11,000円", "11,500円", "12,000円", "12,500円", "13,000円", "13,500円", "14,000円", "14,500円", "15,000円", "15,500円", "16,000円", "16,500円", "17,000円", "17,500円", "18,000円", "18,500円", "19,000円", "19,500円", "20,000円"]
-    
 
     @IBOutlet weak var moneyPicker: UIPickerView!
     @IBOutlet weak var groupAPicker: UIPickerView!

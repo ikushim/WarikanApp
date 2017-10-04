@@ -79,10 +79,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    internal func onClickMyButton(sender: UIButton){
-        
-        self.dismiss(animated: true, completion: nil)
-
-    }
     
 }

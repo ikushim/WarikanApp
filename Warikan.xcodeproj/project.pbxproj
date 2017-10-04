@@ -13,7 +13,6 @@
 		AB6129A31F7B843100996989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6129A11F7B843100996989 /* Main.storyboard */; };
 		AB6129A51F7B843100996989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6129A41F7B843100996989 /* Assets.xcassets */; };
 		AB6129A81F7B843100996989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6129A61F7B843100996989 /* LaunchScreen.storyboard */; };
-		AB6129B01F7B8C3800996989 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129AF1F7B8C3800996989 /* TestViewController.swift */; };
 		AB6129B41F83910B00996989 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129B31F83910B00996989 /* InputViewController.swift */; };
 		AB6129B61F839E6C00996989 /* DateModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129B51F839E6C00996989 /* DateModelPicker.swift */; };
 		AB6129B81F83A07C00996989 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129B71F83A07C00996989 /* DateModel.swift */; };
@@ -21,7 +20,6 @@
 		AB6129BC1F84974400996989 /* NumberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129BB1F84974400996989 /* NumberData.swift */; };
 		AB6129BE1F8497B600996989 /* NumberDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129BD1F8497B600996989 /* NumberDataModel.swift */; };
 		AB6129C01F84987300996989 /* NumberModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129BF1F84987300996989 /* NumberModelPicker.swift */; };
-		AB6129C21F84A3D800996989 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129C11F84A3D800996989 /* SecondViewController.swift */; };
 		AB6129C41F84AA9A00996989 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6129C31F84AA9A00996989 /* NotificationNameExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +34,6 @@
 		AB6129A41F7B843100996989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB6129A71F7B843100996989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6129A91F7B843100996989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB6129AF1F7B8C3800996989 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		AB6129B31F83910B00996989 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		AB6129B51F839E6C00996989 /* DateModelPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModelPicker.swift; sourceTree = "<group>"; };
 		AB6129B71F83A07C00996989 /* DateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
@@ -44,7 +41,6 @@
 		AB6129BB1F84974400996989 /* NumberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberData.swift; sourceTree = "<group>"; };
 		AB6129BD1F8497B600996989 /* NumberDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberDataModel.swift; sourceTree = "<group>"; };
 		AB6129BF1F84987300996989 /* NumberModelPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberModelPicker.swift; sourceTree = "<group>"; };
-		AB6129C11F84A3D800996989 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AB6129C31F84AA9A00996989 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,14 +101,12 @@
 				AB6129A41F7B843100996989 /* Assets.xcassets */,
 				AB6129A61F7B843100996989 /* LaunchScreen.storyboard */,
 				AB6129A91F7B843100996989 /* Info.plist */,
-				AB6129AF1F7B8C3800996989 /* TestViewController.swift */,
 				AB6129B51F839E6C00996989 /* DateModelPicker.swift */,
 				AB6129B71F83A07C00996989 /* DateModel.swift */,
 				AB6129B91F83A30700996989 /* Data.swift */,
 				AB6129BB1F84974400996989 /* NumberData.swift */,
 				AB6129BD1F8497B600996989 /* NumberDataModel.swift */,
 				AB6129BF1F84987300996989 /* NumberModelPicker.swift */,
-				AB6129C11F84A3D800996989 /* SecondViewController.swift */,
 				AB6129C31F84AA9A00996989 /* NotificationNameExtension.swift */,
 			);
 			path = Warikan;
@@ -241,12 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6129C21F84A3D800996989 /* SecondViewController.swift in Sources */,
 				AB6129C01F84987300996989 /* NumberModelPicker.swift in Sources */,
 				AB6129BA1F83A30700996989 /* Data.swift in Sources */,
 				AB6129C41F84AA9A00996989 /* NotificationNameExtension.swift in Sources */,
 				AB6129A01F7B843100996989 /* ViewController.swift in Sources */,
-				AB6129B01F7B8C3800996989 /* TestViewController.swift in Sources */,
 				AB6129B61F839E6C00996989 /* DateModelPicker.swift in Sources */,
 				AB6129BE1F8497B600996989 /* NumberDataModel.swift in Sources */,
 				AB61299E1F7B843100996989 /* AppDelegate.swift in Sources */,
