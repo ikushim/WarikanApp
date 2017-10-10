@@ -225,7 +225,7 @@ class InputViewController: UIViewController{
                 //B,Cパターン
                 //##案1の作成
                 //##倍率1.2
-                var result1 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.2)
+                var result1 = calcAB(money: numMoney, numA: numGroupB, numB: numGroupC, mag: 1.2)
                 
                 draft1[0] = "true"
                 draft1[1] = "0人"
@@ -243,7 +243,7 @@ class InputViewController: UIViewController{
                 
                 //##案2の作成
                 //##倍率1.3
-                var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.4)
+                var result2 = calcAB(money: numMoney, numA: numGroupB, numB: numGroupC, mag: 1.4)
                 
                 draft2[0] = "true"
                 draft2[1] = "0人"
@@ -262,7 +262,7 @@ class InputViewController: UIViewController{
                 
                 //##案3の作成
                 //##倍率1.4
-                var result3 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.6)
+                var result3 = calcAB(money: numMoney, numA: numGroupB, numB: numGroupC, mag: 1.6)
                 
                 draft3[0] = "true"
                 draft3[1] = "0人"
@@ -281,7 +281,7 @@ class InputViewController: UIViewController{
                 
                 //##案4の作成
                 //##倍率1.5
-                var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.8)
+                var result4 = calcAB(money: numMoney, numA: numGroupB, numB: numGroupC, mag: 1.8)
                 
                 draft4[0] = "true"
                 draft4[1] = "0人"
@@ -300,7 +300,7 @@ class InputViewController: UIViewController{
                 
                 //##案5の作成
                 //##倍率1.6
-                var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.0)
+                var result5 = calcAB(money: numMoney, numA: numGroupB, numB: numGroupC, mag: 2.0)
                 
                 draft5[0] = "true"
                 draft5[1] = "0人"
@@ -399,7 +399,7 @@ class InputViewController: UIViewController{
                 
                 //##案2の作成
                 //##倍率1.3
-                var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.6)
+                var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupC, mag: 1.6)
                 
                 draft2[0] = "true"
                 draft2[1] = String(numGroupA) + "人"
@@ -418,7 +418,7 @@ class InputViewController: UIViewController{
                 
                 //##案3の作成
                 //##倍率1.4
-                var result3 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.0)
+                var result3 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupC, mag: 2.0)
                 
                 draft3[0] = "true"
                 draft3[1] = String(numGroupA) + "人"
@@ -437,7 +437,7 @@ class InputViewController: UIViewController{
                 
                 //##案4の作成
                 //##倍率1.5
-                var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.5)
+                var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupC, mag: 2.5)
                 
                 draft4[0] = "true"
                 draft4[1] = String(numGroupA) + "人"
@@ -456,7 +456,7 @@ class InputViewController: UIViewController{
                 
                 //##案5の作成
                 //##倍率1.6
-                var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 3.0)
+                var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupC, mag: 3.0)
                 
                 draft5[0] = "true"
                 draft5[1] = String(numGroupA) + "人"
@@ -724,6 +724,7 @@ class InputViewController: UIViewController{
         let tmpSubTotalLow = tmpLow * numB
         let subTotalLow = moneyStyle(num: tmpSubTotalLow)
         return (high,low,total,dif,subTotalHigh,subTotalLow)
+        
     }
     
     func calcABC(money: Int ,numA: Int, numB: Int , numC: Int , mag1: Double ,mag2: Double) -> (high: String, middle: String, low: String, total: String, dif: String, subTotalHigh: String, subTotalMiddle: String, subTotalLow: String) {

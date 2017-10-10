@@ -8,6 +8,7 @@
 
 import UIKit
 import TabPageViewController
+import Accounts
 
 class ViewController: UIViewController {
     var testNumber: Int = 0
@@ -22,17 +23,22 @@ class ViewController: UIViewController {
     var draft4 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
     var draft5 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
     var numDraft = 0
+    private var myRightButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         
-        
+        //self.navigationController?.navigationBar.isTranslucent = false
+        //self.navigationController?.navigationBar.tintColor = UIColor.black
+        //self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        //self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
+        //UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
+        //myRightButton = UIBarButtonItem(title: "RightBtn", style: .plain, target: self, action: "onClickMyButton:")
+        //let imageAction = UIImage(named:"Action.png")!
+        //myRightButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: "onClickMyButton")
+        //self.navigationItem.rightBarButtonItem = myRightButton
 
         //静的枠の作成
         let screenWidth:CGFloat = view.frame.size.width
@@ -102,8 +108,9 @@ class ViewController: UIViewController {
         
         //Plan A画面の生成
         let vc1 = UIViewController()
+        //vc1.view.backgroundColor = UIColor.clear
         let myView1 = MyView(frame: view.bounds)
-        myView1.backgroundColor = UIColor.white
+        myView1.backgroundColor = UIColor.clear
         vc1.view.addSubview(myView1)
         
         let label102 = UILabel(frame: CGRect(x: 30, y: 150, width: screenWidth-30, height: 30))
@@ -135,17 +142,17 @@ class ViewController: UIViewController {
         //テキストの作成
         
         label102.text = draft1[2]
-        label102.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label102.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label102.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label103.text = draft1[1]
         label104.text = "計：" + draft1[10]
         label112.text = draft1[4]
-        label112.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label112.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label112.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label113.text = draft1[3]
         label114.text = "計：" + draft1[11]
         label122.text = draft1[6]
-        label122.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label122.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label122.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label123.text = draft1[5]
         label124.text = "計：" + draft1[12]
@@ -271,17 +278,17 @@ class ViewController: UIViewController {
         //テキストの作成
         
         label202.text = draft2[2]
-        label202.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label202.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label202.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label203.text = draft2[1]
         label204.text = "計：" + draft2[10]
         label212.text = draft2[4]
-        label212.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label212.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label212.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label213.text = draft2[3]
         label214.text = "計：" + draft2[11]
         label222.text = draft2[6]
-        label222.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label222.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label222.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label223.text = draft2[5]
         label224.text = "計：" + draft2[12]
@@ -407,17 +414,17 @@ class ViewController: UIViewController {
         //テキストの作成
         
         label302.text = draft3[2]
-        label302.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label302.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label302.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label303.text = draft3[1]
         label304.text = "計：" + draft3[10]
         label312.text = draft3[4]
-        label312.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label312.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label312.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label313.text = draft3[3]
         label314.text = "計：" + draft3[11]
         label322.text = draft3[6]
-        label322.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label322.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label322.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label323.text = draft3[5]
         label324.text = "計：" + draft3[12]
@@ -543,17 +550,17 @@ class ViewController: UIViewController {
         //テキストの作成
         
         label402.text = draft4[2]
-        label402.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label402.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label402.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label403.text = draft4[1]
         label404.text = "計：" + draft4[10]
         label412.text = draft4[4]
-        label412.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label412.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label412.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label413.text = draft4[3]
         label414.text = "計：" + draft4[11]
         label422.text = draft4[6]
-        label422.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label422.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label422.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label423.text = draft4[5]
         label424.text = "計：" + draft4[12]
@@ -680,17 +687,17 @@ class ViewController: UIViewController {
         //テキストの作成
         
         label502.text = draft5[2]
-        label502.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label502.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label502.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label503.text = draft5[1]
         label504.text = "計：" + draft5[10]
         label512.text = draft5[4]
-        label512.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label512.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label512.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label513.text = draft5[3]
         label514.text = "計：" + draft5[11]
         label522.text = draft5[6]
-        label522.textColor = #colorLiteral(red: 0.04321289062, green: 0.6320529514, blue: 0.6305881076, alpha: 1)
+        label522.textColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         label522.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label523.text = draft5[5]
         label524.text = "計：" + draft5[12]
@@ -727,303 +734,24 @@ class ViewController: UIViewController {
         vc5.view.addSubview(label552)
         
         
-        /*
-        //Plan B画面の生成
-        let vc2 = UIViewController()
-        let myView2 = MyView(frame: view.bounds)
-        myView2.backgroundColor = UIColor.white
-        vc2.view.addSubview(myView2)
-        let label201 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
-        let label202 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
-        let label203 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
-        let label211 = UILabel(frame: CGRect(x: 20, y: 170, width: screenWidth-30, height: 30))
-        let label212 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-170, height: 30))
-        let label213 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-30, height: 30))
-        let label221 = UILabel(frame: CGRect(x: 20, y: 220, width: screenWidth-30, height: 30))
-        let label222 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-170, height: 30))
-        let label223 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-30, height: 30))
-        let label232 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-170, height: 30))
-        let label233 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-30, height: 30))
-        let label242 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-170, height: 30))
-        let label243 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-30, height: 30))
-        let label252 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-170, height: 30))
-        let label253 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-30, height: 30))
-        label201.textAlignment = NSTextAlignment.left
-        label202.textAlignment = NSTextAlignment.right
-        label203.textAlignment = NSTextAlignment.right
-        label211.textAlignment = NSTextAlignment.left
-        label212.textAlignment = NSTextAlignment.right
-        label213.textAlignment = NSTextAlignment.right
-        label221.textAlignment = NSTextAlignment.left
-        label222.textAlignment = NSTextAlignment.right
-        label223.textAlignment = NSTextAlignment.right
-        label232.textAlignment = NSTextAlignment.right
-        label233.textAlignment = NSTextAlignment.right
-        label242.textAlignment = NSTextAlignment.right
-        label243.textAlignment = NSTextAlignment.right
-        label252.textAlignment = NSTextAlignment.right
-        label253.textAlignment = NSTextAlignment.right
-        
-        //テキストの作成
-        label201.text = "多く払う人"
-        label202.text = draft2[1]
-        label203.text = draft2[2]
-        label211.text = "普通に払う人"
-        label212.text = draft2[3]
-        label213.text = draft2[4]
-        label221.text = "少なく払う人"
-        label222.text = draft2[5]
-        label223.text = draft2[6]
-        label232.text = "合計"
-        label233.text = draft2[8]
-        label242.text = "支払額"
-        label243.text = draft2[7]
-        label252.text = "余り"
-        label253.text = draft2[9]
-        
-        //テキストの追加
-        vc2.view.addSubview(label201)
-        vc2.view.addSubview(label202)
-        vc2.view.addSubview(label203)
-        vc2.view.addSubview(label211)
-        vc2.view.addSubview(label212)
-        vc2.view.addSubview(label213)
-        vc2.view.addSubview(label221)
-        vc2.view.addSubview(label222)
-        vc2.view.addSubview(label223)
-        vc2.view.addSubview(label232)
-        vc2.view.addSubview(label233)
-        vc2.view.addSubview(label242)
-        vc2.view.addSubview(label243)
-        vc2.view.addSubview(label252)
-        vc2.view.addSubview(label253)
-        
-        
-        
-        //Plan C画面の生成
-        let vc3 = UIViewController()
-        let myView3 = MyView(frame: view.bounds)
-        myView3.backgroundColor = UIColor.white
-        vc3.view.addSubview(myView3)
-        let label301 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
-        let label302 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
-        let label303 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
-        let label311 = UILabel(frame: CGRect(x: 20, y: 170, width: screenWidth-30, height: 30))
-        let label312 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-170, height: 30))
-        let label313 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-30, height: 30))
-        let label321 = UILabel(frame: CGRect(x: 20, y: 220, width: screenWidth-30, height: 30))
-        let label322 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-170, height: 30))
-        let label323 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-30, height: 30))
-        let label332 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-170, height: 30))
-        let label333 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-30, height: 30))
-        let label342 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-170, height: 30))
-        let label343 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-30, height: 30))
-        let label352 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-170, height: 30))
-        let label353 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-30, height: 30))
-        label301.textAlignment = NSTextAlignment.left
-        label302.textAlignment = NSTextAlignment.right
-        label303.textAlignment = NSTextAlignment.right
-        label311.textAlignment = NSTextAlignment.left
-        label312.textAlignment = NSTextAlignment.right
-        label313.textAlignment = NSTextAlignment.right
-        label321.textAlignment = NSTextAlignment.left
-        label322.textAlignment = NSTextAlignment.right
-        label323.textAlignment = NSTextAlignment.right
-        label332.textAlignment = NSTextAlignment.right
-        label333.textAlignment = NSTextAlignment.right
-        label342.textAlignment = NSTextAlignment.right
-        label343.textAlignment = NSTextAlignment.right
-        label352.textAlignment = NSTextAlignment.right
-        label353.textAlignment = NSTextAlignment.right
-        
-        //テキストの作成
-        label301.text = "多く払う人"
-        label302.text = draft3[1]
-        label303.text = draft3[2]
-        label311.text = "普通に払う人"
-        label312.text = draft3[3]
-        label313.text = draft3[4]
-        label321.text = "少なく払う人"
-        label322.text = draft3[5]
-        label323.text = draft3[6]
-        label332.text = "合計"
-        label333.text = draft3[8]
-        label342.text = "支払額"
-        label343.text = draft3[7]
-        label352.text = "余り"
-        label353.text = draft3[9]
-        
-        //テキストの追加
-        vc3.view.addSubview(label301)
-        vc3.view.addSubview(label302)
-        vc3.view.addSubview(label303)
-        vc3.view.addSubview(label311)
-        vc3.view.addSubview(label312)
-        vc3.view.addSubview(label313)
-        vc3.view.addSubview(label321)
-        vc3.view.addSubview(label322)
-        vc3.view.addSubview(label323)
-        vc3.view.addSubview(label332)
-        vc3.view.addSubview(label333)
-        vc3.view.addSubview(label342)
-        vc3.view.addSubview(label343)
-        vc3.view.addSubview(label352)
-        vc3.view.addSubview(label353)
-        
-        
-        //Plan D画面の生成
-        let vc4 = UIViewController()
-        let myView4 = MyView(frame: view.bounds)
-        myView4.backgroundColor = UIColor.white
-        vc4.view.addSubview(myView4)
-        let label401 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
-        let label402 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
-        let label403 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
-        let label411 = UILabel(frame: CGRect(x: 20, y: 170, width: screenWidth-30, height: 30))
-        let label412 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-170, height: 30))
-        let label413 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-30, height: 30))
-        let label421 = UILabel(frame: CGRect(x: 20, y: 220, width: screenWidth-30, height: 30))
-        let label422 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-170, height: 30))
-        let label423 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-30, height: 30))
-        let label432 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-170, height: 30))
-        let label433 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-30, height: 30))
-        let label442 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-170, height: 30))
-        let label443 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-30, height: 30))
-        let label452 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-170, height: 30))
-        let label453 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-30, height: 30))
-        label401.textAlignment = NSTextAlignment.left
-        label402.textAlignment = NSTextAlignment.right
-        label403.textAlignment = NSTextAlignment.right
-        label411.textAlignment = NSTextAlignment.left
-        label412.textAlignment = NSTextAlignment.right
-        label413.textAlignment = NSTextAlignment.right
-        label421.textAlignment = NSTextAlignment.left
-        label422.textAlignment = NSTextAlignment.right
-        label423.textAlignment = NSTextAlignment.right
-        label432.textAlignment = NSTextAlignment.right
-        label433.textAlignment = NSTextAlignment.right
-        label442.textAlignment = NSTextAlignment.right
-        label443.textAlignment = NSTextAlignment.right
-        label452.textAlignment = NSTextAlignment.right
-        label453.textAlignment = NSTextAlignment.right
-        
-        //テキストの作成
-        label401.text = "多く払う人"
-        label402.text = draft4[1]
-        label403.text = draft4[2]
-        label411.text = "普通に払う人"
-        label412.text = draft4[3]
-        label413.text = draft4[4]
-        label421.text = "少なく払う人"
-        label422.text = draft4[5]
-        label423.text = draft4[6]
-        label432.text = "合計"
-        label433.text = draft4[8]
-        label442.text = "支払額"
-        label443.text = draft4[7]
-        label452.text = "余り"
-        label453.text = draft4[9]
-        
-        //テキストの追加
-        vc4.view.addSubview(label401)
-        vc4.view.addSubview(label402)
-        vc4.view.addSubview(label403)
-        vc4.view.addSubview(label411)
-        vc4.view.addSubview(label412)
-        vc4.view.addSubview(label413)
-        vc4.view.addSubview(label421)
-        vc4.view.addSubview(label422)
-        vc4.view.addSubview(label423)
-        vc4.view.addSubview(label432)
-        vc4.view.addSubview(label433)
-        vc4.view.addSubview(label442)
-        vc4.view.addSubview(label443)
-        vc4.view.addSubview(label452)
-        vc4.view.addSubview(label453)
-        
-        
-        //Plan E画面の生成
-        let vc5 = UIViewController()
-        let myView5 = MyView(frame: view.bounds)
-        myView5.backgroundColor = UIColor.white
-        vc5.view.addSubview(myView5)
-        let label501 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
-        let label502 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
-        let label503 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
-        let label511 = UILabel(frame: CGRect(x: 20, y: 170, width: screenWidth-30, height: 30))
-        let label512 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-170, height: 30))
-        let label513 = UILabel(frame: CGRect(x: 0, y: 170, width: screenWidth-30, height: 30))
-        let label521 = UILabel(frame: CGRect(x: 20, y: 220, width: screenWidth-30, height: 30))
-        let label522 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-170, height: 30))
-        let label523 = UILabel(frame: CGRect(x: 0, y: 220, width: screenWidth-30, height: 30))
-        let label532 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-170, height: 30))
-        let label533 = UILabel(frame: CGRect(x: 0, y: 280, width: screenWidth-30, height: 30))
-        let label542 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-170, height: 30))
-        let label543 = UILabel(frame: CGRect(x: 0, y: 330, width: screenWidth-30, height: 30))
-        let label552 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-170, height: 30))
-        let label553 = UILabel(frame: CGRect(x: 0, y: 380, width: screenWidth-30, height: 30))
-        //label101.textColor = UIColor.blue
-        label501.textAlignment = NSTextAlignment.left
-        label502.textAlignment = NSTextAlignment.right
-        label503.textAlignment = NSTextAlignment.right
-        label511.textAlignment = NSTextAlignment.left
-        label512.textAlignment = NSTextAlignment.right
-        label513.textAlignment = NSTextAlignment.right
-        label521.textAlignment = NSTextAlignment.left
-        label522.textAlignment = NSTextAlignment.right
-        label523.textAlignment = NSTextAlignment.right
-        label532.textAlignment = NSTextAlignment.right
-        label533.textAlignment = NSTextAlignment.right
-        label542.textAlignment = NSTextAlignment.right
-        label543.textAlignment = NSTextAlignment.right
-        label552.textAlignment = NSTextAlignment.right
-        label553.textAlignment = NSTextAlignment.right
-        
-        //テキストの作成
-        label501.text = "多く払う人"
-        label502.text = draft5[1]
-        label503.text = draft5[2]
-        label511.text = "普通に払う人"
-        label512.text = draft5[3]
-        label513.text = draft5[4]
-        label521.text = "少なく払う人"
-        label522.text = draft5[5]
-        label523.text = draft5[6]
-        label532.text = "合計"
-        label533.text = draft5[8]
-        label542.text = "支払額"
-        label543.text = draft5[7]
-        label552.text = "余り"
-        label553.text = draft5[9]
-        
-        //テキストの追加
-        vc5.view.addSubview(label501)
-        vc5.view.addSubview(label502)
-        vc5.view.addSubview(label503)
-        vc5.view.addSubview(label511)
-        vc5.view.addSubview(label512)
-        vc5.view.addSubview(label513)
-        vc5.view.addSubview(label521)
-        vc5.view.addSubview(label522)
-        vc5.view.addSubview(label523)
-        vc5.view.addSubview(label532)
-        vc5.view.addSubview(label533)
-        vc5.view.addSubview(label542)
-        vc5.view.addSubview(label543)
-        vc5.view.addSubview(label552)
-        vc5.view.addSubview(label553)
-        */
-        
-        
 
         
         //タブビューの生成
         let tc = TabPageViewController.create()
+        
+        tc.option.tabBackgroundColor = UIColor.white
+        tc.option.currentColor = UIColor.black
+        tc.option.defaultColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        tc.option.pageBackgoundColor = UIColor.white
+        
         // タブに表示するタイトル
         if numDraft == 1 {
             tc.tabItems = [(vc1, "Plan A")]
+            tc.option.tabWidth = 375
+            
         } else if numDraft == 2 {
             tc.tabItems = [(vc1, "Plan A"),(vc2, "Plan B")]
+            tc.option.tabWidth = 187.5
         } else if numDraft == 3 {
             tc.tabItems = [(vc1, "Plan A"),(vc2, "Plan B"),(vc3, "Plan C")]
             tc.isInfinity = true
@@ -1035,12 +763,15 @@ class ViewController: UIViewController {
             tc.isInfinity = true
         }
         
+        //vc1.view.backgroundColor = UIColor.clear
         self.addChildViewController(tc)
         self.view.addSubview(tc.view)
-        var option = TabPageOption()
-        // 選択されたタブの文字&バーの色
-        option.currentColor = #colorLiteral(red: 0.2980392157, green: 0.8196078431, blue: 0.7058823529, alpha: 1)
-        tc.option = option
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1096,6 +827,28 @@ class MyView: UIView {
         path6.addLine(to: CGPoint(x: 350, y: 530))
         path6.lineWidth = 0.2 // 線の太さ
         path6.stroke()
+    }
+    
+    internal func onClickMyButton(sender: UIButton){
+        let shareText = "Apple - Apple Watch"
+        let activityItems = [shareText]
+        // 初期化処理
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        // 使用しないアクティビティタイプ
+        let excludedActivityTypes = [
+            UIActivityType.postToFacebook,
+            UIActivityType.postToTwitter,
+            UIActivityType.saveToCameraRoll,
+            UIActivityType.print
+        ]
+        
+        activityVC.excludedActivityTypes = excludedActivityTypes
+        
+        // UIActivityViewControllerを表示
+        let vc6 = UIViewController()
+        vc6.present(activityVC, animated: true, completion: nil)
+        
     }
 }
 
