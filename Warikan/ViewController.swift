@@ -30,6 +30,10 @@ class ViewController: UIViewController {
 
         //案1画面の生成
         let vc1 = UIViewController()
+        let myView1 = MyView(frame: view.bounds)
+        myView1.backgroundColor = UIColor.white
+        vc1.view.addSubview(myView1)
+        
         let screenWidth:CGFloat = view.frame.size.width
         let label101 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
         let label102 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
@@ -100,6 +104,9 @@ class ViewController: UIViewController {
         
         //案2画面の生成
         let vc2 = UIViewController()
+        let myView2 = MyView(frame: view.bounds)
+        myView2.backgroundColor = UIColor.white
+        vc2.view.addSubview(myView2)
         let label201 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
         let label202 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
         let label203 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
@@ -169,6 +176,9 @@ class ViewController: UIViewController {
         
         //案3画面の生成
         let vc3 = UIViewController()
+        let myView3 = MyView(frame: view.bounds)
+        myView3.backgroundColor = UIColor.white
+        vc3.view.addSubview(myView3)
         let label301 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
         let label302 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
         let label303 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
@@ -237,6 +247,9 @@ class ViewController: UIViewController {
         
         //案4画面の生成
         let vc4 = UIViewController()
+        let myView4 = MyView(frame: view.bounds)
+        myView4.backgroundColor = UIColor.white
+        vc4.view.addSubview(myView4)
         let label401 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
         let label402 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
         let label403 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
@@ -305,6 +318,9 @@ class ViewController: UIViewController {
         
         //案5画面の生成
         let vc5 = UIViewController()
+        let myView5 = MyView(frame: view.bounds)
+        myView5.backgroundColor = UIColor.white
+        vc5.view.addSubview(myView5)
         let label501 = UILabel(frame: CGRect(x: 20, y: 120, width: screenWidth-30, height: 30))
         let label502 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-170, height: 30))
         let label503 = UILabel(frame: CGRect(x: 0, y: 120, width: screenWidth-30, height: 30))
@@ -371,6 +387,8 @@ class ViewController: UIViewController {
         vc5.view.addSubview(label552)
         vc5.view.addSubview(label553)
         
+        
+        
 
         
         //タブビューの生成
@@ -410,5 +428,46 @@ class ViewController: UIViewController {
     
     
     
+}
+
+class MyView: UIView {
+    override func draw(_ rect: CGRect) {
+        UIColor.gray.setStroke() // 色をセット
+        let path1 = UIBezierPath()
+        path1.move(to: CGPoint(x: 20, y: 150))
+        path1.addLine(to: CGPoint(x: 345, y: 150))
+        path1.lineWidth = 0.5 // 線の太さ
+        path1.stroke()
+        
+        let path2 = UIBezierPath()
+        path2.move(to: CGPoint(x: 20, y: 200))
+        path2.addLine(to: CGPoint(x: 345, y: 200))
+        path2.lineWidth = 0.5 // 線の太さ
+        path2.stroke()
+        
+        let path3 = UIBezierPath()
+        path3.move(to: CGPoint(x: 20, y: 250))
+        path3.addLine(to: CGPoint(x: 345, y: 250))
+        path3.lineWidth = 0.5 // 線の太さ
+        path3.stroke()
+        
+        let path4 = UIBezierPath()
+        path4.move(to: CGPoint(x: 150, y: 310))
+        path4.addLine(to: CGPoint(x: 345, y: 310))
+        path4.lineWidth = 0.5 // 線の太さ
+        path4.stroke()
+        
+        let path5 = UIBezierPath()
+        path5.move(to: CGPoint(x: 150, y: 360))
+        path5.addLine(to: CGPoint(x: 345, y: 360))
+        path5.lineWidth = 0.5 // 線の太さ
+        path5.stroke()
+        
+        let path6 = UIBezierPath()
+        path6.move(to: CGPoint(x: 150, y: 410))
+        path6.addLine(to: CGPoint(x: 345, y: 410))
+        path6.lineWidth = 0.5 // 線の太さ
+        path6.stroke()
+    }
 }
 

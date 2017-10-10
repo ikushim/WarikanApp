@@ -215,7 +215,7 @@ class InputViewController: UIViewController{
                 
                 //##案2の作成
                 //##倍率1.3
-                var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.3)
+                var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.4)
                 
                 draft2[0] = "true"
                 draft2[1] = "0人"
@@ -231,7 +231,7 @@ class InputViewController: UIViewController{
                 
                 //##案3の作成
                 //##倍率1.4
-                var result3 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.4)
+                var result3 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.6)
                 
                 draft3[0] = "true"
                 draft3[1] = "0人"
@@ -247,7 +247,7 @@ class InputViewController: UIViewController{
                 
                 //##案4の作成
                 //##倍率1.5
-                var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.5)
+                var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.8)
                 
                 draft4[0] = "true"
                 draft4[1] = "0人"
@@ -263,7 +263,7 @@ class InputViewController: UIViewController{
                 
                 //##案5の作成
                 //##倍率1.6
-                var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.6)
+                var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.0)
                 
                 draft5[0] = "true"
                 draft5[1] = "0人"
@@ -330,7 +330,7 @@ class InputViewController: UIViewController{
                 //A,Cパターン
                 //##案1の作成
                 //##倍率1.2
-                var result1 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupC, mag: 1.5)
+                var result1 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupC, mag: 1.4)
                 
                 draft1[0] = "true"
                 draft1[1] = String(numGroupA) + "人"
@@ -345,7 +345,7 @@ class InputViewController: UIViewController{
                 
                 //##案2の作成
                 //##倍率1.3
-                var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.8)
+                var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.6)
                 
                 draft2[0] = "true"
                 draft2[1] = String(numGroupA) + "人"
@@ -377,7 +377,7 @@ class InputViewController: UIViewController{
                 
                 //##案4の作成
                 //##倍率1.5
-                var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.2)
+                var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.5)
                 
                 draft4[0] = "true"
                 draft4[1] = String(numGroupA) + "人"
@@ -393,7 +393,7 @@ class InputViewController: UIViewController{
                 
                 //##案5の作成
                 //##倍率1.6
-                var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.5)
+                var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 3.0)
                 
                 draft5[0] = "true"
                 draft5[1] = String(numGroupA) + "人"
@@ -429,7 +429,7 @@ class InputViewController: UIViewController{
             
             //##案2の作成
             //##倍率1.3
-            var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.3)
+            var result2 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.4)
             
             draft2[0] = "true"
             draft2[1] = String(numGroupA) + "人"
@@ -445,7 +445,7 @@ class InputViewController: UIViewController{
            
             //##案3の作成
             //##倍率1.4
-            var result3 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.4)
+            var result3 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.6)
             
             draft3[0] = "true"
             draft3[1] = String(numGroupA) + "人"
@@ -461,7 +461,7 @@ class InputViewController: UIViewController{
             
             //##案4の作成
             //##倍率1.5
-            var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.5)
+            var result4 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.8)
             
             draft4[0] = "true"
             draft4[1] = String(numGroupA) + "人"
@@ -477,7 +477,7 @@ class InputViewController: UIViewController{
             
             //##案5の作成
             //##倍率1.6
-            var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 1.6)
+            var result5 = calcAB(money: numMoney, numA: numGroupA, numB: numGroupB, mag: 2.0)
             
             draft5[0] = "true"
             draft5[1] = String(numGroupA) + "人"
@@ -527,7 +527,7 @@ class InputViewController: UIViewController{
             
             //##案3の作成
             //##倍率1.8,1.4
-            var result3 = calcABC(money: numMoney, numA: numGroupA, numB: numGroupB, numC: numGroupC, mag1: 1.8, mag2: 1.4)
+            var result3 = calcABC(money: numMoney, numA: numGroupA, numB: numGroupB, numC: numGroupC, mag1: 2.0, mag2: 1.4)
             
             draft3[0] = "true"
             draft3[1] = String(numGroupA) + "人"
@@ -542,7 +542,7 @@ class InputViewController: UIViewController{
             
             //##案4の作成
             //##倍率1.8,1.6
-            var result4 = calcABC(money: numMoney, numA: numGroupA, numB: numGroupB, numC: numGroupC, mag1: 2.0, mag2: 1.6)
+            var result4 = calcABC(money: numMoney, numA: numGroupA, numB: numGroupB, numC: numGroupC, mag1: 2.5, mag2: 1.8)
             
             draft4[0] = "true"
             draft4[1] = String(numGroupA) + "人"
@@ -557,7 +557,7 @@ class InputViewController: UIViewController{
             
             //##案5の作成
             //##倍率2.0,1.6
-            var result5 = calcABC(money: numMoney, numA: numGroupA, numB: numGroupB, numC: numGroupC, mag1: 2.2, mag2: 1.6)
+            var result5 = calcABC(money: numMoney, numA: numGroupA, numB: numGroupB, numC: numGroupC, mag1: 3.0, mag2: 2.0)
             
             draft5[0] = "true"
             draft5[1] = String(numGroupA) + "人"
