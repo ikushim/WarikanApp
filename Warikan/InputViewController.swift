@@ -20,11 +20,11 @@ class InputViewController: UIViewController{
     var numGroupB:Int = 0
     var numGroupC:Int = 0
     var numDraft = 0
-    var draft1 = ["false","0","0","0","0","0","0","0","0","0"]
-    var draft2 = ["false","0","0","0","0","0","0","0","0","0"]
-    var draft3 = ["false","0","0","0","0","0","0","0","0","0"]
-    var draft4 = ["false","0","0","0","0","0","0","0","0","0"]
-    var draft5 = ["false","0","0","0","0","0","0","0","0","0"]
+    var draft1 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+    var draft2 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+    var draft3 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+    var draft4 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+    var draft5 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
     
     var dateModelPicker: DateModelPicker!
     var numberModelPicker: NumberModelPicker!
@@ -32,6 +32,11 @@ class InputViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.5294117647, alpha: 1)
         
         rotationAngle = -90 * (.pi/180)
         dateModelPicker = DateModelPicker()
@@ -97,11 +102,11 @@ class InputViewController: UIViewController{
 
         //割り勘案初期化
         numDraft = 0
-        draft1 = ["false","0","0","0","0","0","0","0","0","0"]
-        draft2 = ["false","0","0","0","0","0","0","0","0","0"]
-        draft3 = ["false","0","0","0","0","0","0","0","0","0"]
-        draft4 = ["false","0","0","0","0","0","0","0","0","0"]
-        draft5 = ["false","0","0","0","0","0","0","0","0","0"]
+        draft1 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+        draft2 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+        draft3 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+        draft4 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
+        draft5 = ["false","0","0","0","0","0","0","0","0","0","0","0","0"]
         
         //割り勘案の作成
         if numGroupA == 0 {
@@ -126,6 +131,10 @@ class InputViewController: UIViewController{
                 draft1[7] = moneyStyle(num: numMoney)
                 draft1[8] = moneyStyle(num: total1)
                 draft1[9] = moneyStyle(num: difference1)
+                var tmpSubTotal1 = Int(num1) * numGroupC
+                draft1[10] = "0円"
+                draft1[11] = "0円"
+                draft1[12] = moneyStyle(num: tmpSubTotal1)
                 numDraft = 1
                 
                 //案2の作成
@@ -147,6 +156,12 @@ class InputViewController: UIViewController{
                     draft2[7] = moneyStyle(num: numMoney)
                     draft2[8] = moneyStyle(num: total2)
                     draft2[9] = moneyStyle(num: difference2)
+                    
+                    var tmpSubTotal2 = Int(num2) * numGroupC
+                    draft2[10] = "0円"
+                    draft2[11] = "0円"
+                    draft2[12] = moneyStyle(num: tmpSubTotal2)
+                    
                     numDraft = 2
                 }
                 
@@ -172,6 +187,10 @@ class InputViewController: UIViewController{
                 draft1[7] = moneyStyle(num: numMoney)
                 draft1[8] = moneyStyle(num: total1)
                 draft1[9] = moneyStyle(num: difference1)
+                var tmpSubTotal1 = Int(num1) * numGroupB
+                draft1[10] = "0円"
+                draft1[11] = moneyStyle(num: tmpSubTotal1)
+                draft1[12] = "0円"
                 numDraft = 1
                 
                 //案2の作成
@@ -193,6 +212,12 @@ class InputViewController: UIViewController{
                     draft2[7] = moneyStyle(num: numMoney)
                     draft2[8] = moneyStyle(num: total2)
                     draft2[9] = moneyStyle(num: difference2)
+                    
+                    var tmpSubTotal2 = Int(num2) * numGroupB
+                    draft2[10] = "0円"
+                    draft2[11] = moneyStyle(num: tmpSubTotal2)
+                    draft2[12] = "0円"
+                    
                     numDraft = 2
                 }
                 
@@ -212,6 +237,9 @@ class InputViewController: UIViewController{
                 draft1[7] = moneyStyle(num: numMoney)
                 draft1[8] = result1.total
                 draft1[9] = result1.dif
+                draft1[10] = "0円"
+                draft1[11] = result1.subTotalHigh
+                draft1[12] = result1.subTotalLow
                 
                 //##案2の作成
                 //##倍率1.3
@@ -227,6 +255,9 @@ class InputViewController: UIViewController{
                 draft2[7] = moneyStyle(num: numMoney)
                 draft2[8] = result2.total
                 draft2[9] = result2.dif
+                draft2[10] = "0円"
+                draft2[11] = result2.subTotalHigh
+                draft2[12] = result2.subTotalLow
                 
                 
                 //##案3の作成
@@ -243,6 +274,9 @@ class InputViewController: UIViewController{
                 draft3[7] = moneyStyle(num: numMoney)
                 draft3[8] = result3.total
                 draft3[9] = result3.dif
+                draft3[10] = "0円"
+                draft3[11] = result3.subTotalHigh
+                draft3[12] = result3.subTotalLow
                 
                 
                 //##案4の作成
@@ -259,6 +293,9 @@ class InputViewController: UIViewController{
                 draft4[7] = moneyStyle(num: numMoney)
                 draft4[8] = result4.total
                 draft4[9] = result4.dif
+                draft4[10] = "0円"
+                draft4[11] = result4.subTotalHigh
+                draft4[12] = result4.subTotalLow
                 
                 
                 //##案5の作成
@@ -275,6 +312,9 @@ class InputViewController: UIViewController{
                 draft5[7] = moneyStyle(num: numMoney)
                 draft5[8] = result5.total
                 draft5[9] = result5.dif
+                draft5[10] = "0円"
+                draft5[11] = result5.subTotalHigh
+                draft5[12] = result5.subTotalLow
                 
                 numDraft = 5
                 
@@ -302,6 +342,10 @@ class InputViewController: UIViewController{
                 draft1[7] = moneyStyle(num: numMoney)
                 draft1[8] = moneyStyle(num: total1)
                 draft1[9] = moneyStyle(num: difference1)
+                var tmpSubTotal1 = Int(num1) * numGroupA
+                draft1[10] = moneyStyle(num: tmpSubTotal1)
+                draft1[11] = "0円"
+                draft1[12] = "0円"
                 numDraft = 1
                 
                 //案2の作成
@@ -313,6 +357,7 @@ class InputViewController: UIViewController{
                     var total2 = Int(num2) * numGroupA
                     var difference2 = total2 - numMoney
                     
+                    
                     draft2[0] = "true"
                     draft2[1] = String(numGroupA) + "人"
                     draft2[2] = moneyStyle(num: Int(num2))
@@ -323,6 +368,12 @@ class InputViewController: UIViewController{
                     draft2[7] = moneyStyle(num: numMoney)
                     draft2[8] = moneyStyle(num: total2)
                     draft2[9] = moneyStyle(num: difference2)
+                    
+                    var tmpSubTotal2 = Int(num2) * numGroupA
+                    draft2[10] = moneyStyle(num: tmpSubTotal2)
+                    draft2[11] = "0円"
+                    draft2[12] = "0円"
+                    
                     numDraft = 2
                 }
                 
@@ -342,6 +393,9 @@ class InputViewController: UIViewController{
                 draft1[7] = moneyStyle(num: numMoney)
                 draft1[8] = result1.total
                 draft1[9] = result1.dif
+                draft1[10] = result1.subTotalHigh
+                draft1[11] = "0円"
+                draft1[12] = result1.subTotalLow
                 
                 //##案2の作成
                 //##倍率1.3
@@ -357,6 +411,9 @@ class InputViewController: UIViewController{
                 draft2[7] = moneyStyle(num: numMoney)
                 draft2[8] = result2.total
                 draft2[9] = result2.dif
+                draft2[10] = result2.subTotalHigh
+                draft2[11] = "0円"
+                draft2[12] = result2.subTotalLow
                 
                 
                 //##案3の作成
@@ -373,6 +430,9 @@ class InputViewController: UIViewController{
                 draft3[7] = moneyStyle(num: numMoney)
                 draft3[8] = result3.total
                 draft3[9] = result3.dif
+                draft3[10] = result3.subTotalHigh
+                draft3[11] = "0円"
+                draft3[12] = result3.subTotalLow
                 
                 
                 //##案4の作成
@@ -389,6 +449,9 @@ class InputViewController: UIViewController{
                 draft4[7] = moneyStyle(num: numMoney)
                 draft4[8] = result4.total
                 draft4[9] = result4.dif
+                draft4[10] = result4.subTotalHigh
+                draft4[11] = "0円"
+                draft4[12] = result4.subTotalLow
                 
                 
                 //##案5の作成
@@ -405,6 +468,9 @@ class InputViewController: UIViewController{
                 draft5[7] = moneyStyle(num: numMoney)
                 draft5[8] = result5.total
                 draft5[9] = result5.dif
+                draft5[10] = result5.subTotalHigh
+                draft5[11] = "0円"
+                draft5[12] = result5.subTotalLow
                 
                 numDraft = 5
                 
@@ -426,6 +492,9 @@ class InputViewController: UIViewController{
             draft1[7] = moneyStyle(num: numMoney)
             draft1[8] = result1.total
             draft1[9] = result1.dif
+            draft1[10] = result1.subTotalHigh
+            draft1[11] = result1.subTotalLow
+            draft1[12] = "0円"
             
             //##案2の作成
             //##倍率1.3
@@ -441,6 +510,9 @@ class InputViewController: UIViewController{
             draft2[7] = moneyStyle(num: numMoney)
             draft2[8] = result2.total
             draft2[9] = result2.dif
+            draft2[10] = result2.subTotalHigh
+            draft2[11] = result2.subTotalLow
+            draft2[12] = "0円"
             
            
             //##案3の作成
@@ -457,6 +529,9 @@ class InputViewController: UIViewController{
             draft3[7] = moneyStyle(num: numMoney)
             draft3[8] = result3.total
             draft3[9] = result3.dif
+            draft3[10] = result3.subTotalHigh
+            draft3[11] = result3.subTotalLow
+            draft3[12] = "0円"
             
             
             //##案4の作成
@@ -473,6 +548,9 @@ class InputViewController: UIViewController{
             draft4[7] = moneyStyle(num: numMoney)
             draft4[8] = result4.total
             draft4[9] = result4.dif
+            draft4[10] = result4.subTotalHigh
+            draft4[11] = result4.subTotalLow
+            draft4[12] = "0円"
             
             
             //##案5の作成
@@ -489,6 +567,9 @@ class InputViewController: UIViewController{
             draft5[7] = moneyStyle(num: numMoney)
             draft5[8] = result5.total
             draft5[9] = result5.dif
+            draft5[10] = result5.subTotalHigh
+            draft5[11] = result5.subTotalLow
+            draft5[12] = "0円"
             
             numDraft = 5
             
@@ -509,6 +590,9 @@ class InputViewController: UIViewController{
             draft1[7] = moneyStyle(num: numMoney)
             draft1[8] = result1.total
             draft1[9] = result1.dif
+            draft1[10] = result1.subTotalHigh
+            draft1[11] = result1.subTotalMiddle
+            draft1[12] = result1.subTotalLow
             
             //##案2の作成
             //##倍率1.6,1.4
@@ -524,6 +608,9 @@ class InputViewController: UIViewController{
             draft2[7] = moneyStyle(num: numMoney)
             draft2[8] = result2.total
             draft2[9] = result2.dif
+            draft2[10] = result2.subTotalHigh
+            draft2[11] = result2.subTotalMiddle
+            draft2[12] = result2.subTotalLow
             
             //##案3の作成
             //##倍率1.8,1.4
@@ -539,6 +626,9 @@ class InputViewController: UIViewController{
             draft3[7] = moneyStyle(num: numMoney)
             draft3[8] = result3.total
             draft3[9] = result3.dif
+            draft3[10] = result3.subTotalHigh
+            draft3[11] = result3.subTotalMiddle
+            draft3[12] = result3.subTotalLow
             
             //##案4の作成
             //##倍率1.8,1.6
@@ -554,6 +644,9 @@ class InputViewController: UIViewController{
             draft4[7] = moneyStyle(num: numMoney)
             draft4[8] = result4.total
             draft4[9] = result4.dif
+            draft4[10] = result4.subTotalHigh
+            draft4[11] = result4.subTotalMiddle
+            draft4[12] = result4.subTotalLow
             
             //##案5の作成
             //##倍率2.0,1.6
@@ -569,6 +662,9 @@ class InputViewController: UIViewController{
             draft5[7] = moneyStyle(num: numMoney)
             draft5[8] = result5.total
             draft5[9] = result5.dif
+            draft5[10] = result5.subTotalHigh
+            draft5[11] = result5.subTotalMiddle
+            draft5[12] = result5.subTotalLow
             
             
             numDraft = 5
@@ -613,7 +709,7 @@ class InputViewController: UIViewController{
     }
     
     
-    func calcAB(money: Int ,numA: Int,numB: Int,mag: Double) -> (high: String, low: String, total: String, dif: String) {
+    func calcAB(money: Int ,numA: Int,numB: Int,mag: Double) -> (high: String, low: String, total: String, dif: String, subTotalHigh: String, subTotalLow: String) {
         let hoge = Double(money) / ( Double(numA) * mag + Double(numB) ) / 100
         let tmpHigh = Int(ceil(hoge * mag) * 100)
         let high = moneyStyle(num:tmpHigh)
@@ -623,10 +719,14 @@ class InputViewController: UIViewController{
         let total = moneyStyle(num: tmpTotal)
         let tmpDif = tmpTotal - money
         let dif = moneyStyle(num: tmpDif)
-        return (high,low,total,dif)
+        let tmpSubTotalHigh = tmpHigh * numA
+        let subTotalHigh = moneyStyle(num: tmpSubTotalHigh)
+        let tmpSubTotalLow = tmpLow * numB
+        let subTotalLow = moneyStyle(num: tmpSubTotalLow)
+        return (high,low,total,dif,subTotalHigh,subTotalLow)
     }
     
-    func calcABC(money: Int ,numA: Int, numB: Int , numC: Int , mag1: Double ,mag2: Double) -> (high: String, middle: String, low: String, total: String, dif: String) {
+    func calcABC(money: Int ,numA: Int, numB: Int , numC: Int , mag1: Double ,mag2: Double) -> (high: String, middle: String, low: String, total: String, dif: String, subTotalHigh: String, subTotalMiddle: String, subTotalLow: String) {
         let hoge = Double(money) / ( Double(numA) * mag1 + Double(numB) * mag2 + Double(numC) ) / 100
         let tmpHigh = Int(ceil(hoge * mag1) * 100)
         let high = moneyStyle(num:tmpHigh)
@@ -638,7 +738,14 @@ class InputViewController: UIViewController{
         let total = moneyStyle(num: tmpTotal)
         let tmpDif = tmpTotal - money
         let dif = moneyStyle(num: tmpDif)
-        return (high,middle,low,total,dif)
+        let tmpSubTotalHigh = tmpHigh * numA
+        let subTotalHigh = moneyStyle(num: tmpSubTotalHigh)
+        let tmpSubTotalMiddle = tmpMiddle * numB
+        let subTotalMiddle = moneyStyle(num: tmpSubTotalMiddle)
+        let tmpSubTotalLow = tmpLow * numC
+        let subTotalLow = moneyStyle(num: tmpSubTotalLow)
+        
+        return (high,middle,low,total,dif,subTotalHigh,subTotalMiddle,subTotalLow)
     }
     
     

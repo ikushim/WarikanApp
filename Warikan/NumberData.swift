@@ -17,6 +17,11 @@ class NumberData {
         data.append(NumberDataModel(numberOfPeople: "3人"))
         data.append(NumberDataModel(numberOfPeople: "4人"))
         data.append(NumberDataModel(numberOfPeople: "5人"))
+        data.append(NumberDataModel(numberOfPeople: "6人"))
+        data.append(NumberDataModel(numberOfPeople: "7人"))
+        data.append(NumberDataModel(numberOfPeople: "8人"))
+        data.append(NumberDataModel(numberOfPeople: "9人"))
+        data.append(NumberDataModel(numberOfPeople: "10人"))
         
         return data
     }
